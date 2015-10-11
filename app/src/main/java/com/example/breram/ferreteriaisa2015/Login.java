@@ -40,6 +40,7 @@ public class Login extends Activity implements OnClickListener {
 
     // "http://xxx.xxx.x.x:1234/cas/login.php";
 
+
     private static final String LOGIN_CLIENTE_URL = "http://glezsoft.esy.es/webservices/login_cliente.php";
     private static final String LOGIN_ADMINISTRADOR_URL = "http://glezsoft.esy.es/webservices/login_admin.php";
 
