@@ -9,7 +9,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     android:contentDescription="@string/logininibackground"
     android:scaleType="centerCrop"
     android:src="@drawable/loginisa"
-
     android:alpha="0.7"/>
 
     <RelativeLayout
