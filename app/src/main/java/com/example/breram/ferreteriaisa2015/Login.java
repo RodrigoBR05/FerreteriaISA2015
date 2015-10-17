@@ -38,8 +38,6 @@ public class Login extends Activity implements OnClickListener {
     // Clase JSONParser
     JSONParser jsonParser = new JSONParser();
 
-    // "http://xxx.xxx.x.x:1234/cas/login.php";
-
     //URL web services Cliente
     private static final String LOGIN_CLIENTE_URL = "http://glezsoft.esy.es/webservices/login_cliente.php";
     //URL web services Administrador
