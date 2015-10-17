@@ -53,20 +53,20 @@
 
 
     <TextView
-        android:id="@+id/textViewFechaNacimiento"
+        android:id="@+id/textViewTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/edtApellidos"
         android:layout_below="@+id/edtApellidos"
-        android:text="Fecha nacimiento" />
+        android:text="Teléfono" />
 
     <EditText
-        android:id="@+id/edtFechaNacimiento"
+        android:id="@+id/edtTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewFechaNacimiento"
+        android:layout_below="@+id/textViewTelefono"
         android:layout_centerHorizontal="true"
-        android:text="aaaa-mm-dd"
+        android:text="########"
         android:ems="10" />
 
 
@@ -74,8 +74,8 @@
         android:id="@+id/textViewCorreoElectronico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtFechaNacimiento"
-        android:layout_below="@+id/edtFechaNacimiento"
+        android:layout_alignLeft="@+id/edtTelefono"
+        android:layout_below="@+id/edtTelefono"
         android:text="Correo electrónico" />
 
     <EditText

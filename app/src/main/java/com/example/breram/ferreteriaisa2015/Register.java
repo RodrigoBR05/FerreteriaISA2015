@@ -21,11 +21,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Register extends Activity implements OnClickListener{
-    private EditText user, pass;
-    private Button  mRegister;
+    private EditText edtUsuario, edtApellidos,edtTelefono,edtCorreoElectronico,edtNombreUsuario,edtContraseña;
+    private Button  btnRegistrar;
 
-    public static String username2;
-    public static String password2;
+    public static String usuarioS;
+    public static String apellidosS;
+    public static String telefonoS;
+    public static String correoS;
+    public static String nombreUsuarioS;
+    public static String contrasenaS;
 
     // Progress Dialog
     private ProgressDialog pDialog;
@@ -33,11 +37,8 @@ public class Register extends Activity implements OnClickListener{
     // JSON parser class
     JSONParser jsonParser = new JSONParser();
 
-    //si lo trabajan de manera local en xxx.xxx.x.x va su ip local
-    // private static final String REGISTER_URL = "http://xxx.xxx.x.x:1234/cas/register.php";
-
-    //testing on Emulator:
-    private static final String REGISTER_URL = "http://10.0.2.2:1234/cas/register.php";
+    //Ruta del web services
+    private static final String REGISTER_URL = "http://glezsoft.esy.es/webservices/register.php";
 
     //ids
     private static final String TAG_SUCCESS = "success";
@@ -49,22 +50,30 @@ public class Register extends Activity implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
-        //user = (EditText)findViewById(R.id.username);
-        //pass = (EditText)findViewById(R.id.password);
+        edtUsuario = (EditText)findViewById(R.id.edtUsuario);
+        edtApellidos = (EditText)findViewById(R.id.edtApellidos);
+        edtTelefono = (EditText)findViewById(R.id.edtTelefono);
+        edtCorreoElectronico = (EditText)findViewById(R.id.edtCorreoElectronico);
+        edtNombreUsuario = (EditText)findViewById(R.id.edtNombreUsuario);
+        edtContraseña = (EditText)findViewById(R.id.edtcontraseña);
 
 
-//        mRegister = (Button)findViewById(R.id.register);
-  //      mRegister.setOnClickListener(this);
-
+        btnRegistrar = (Button)findViewById(R.id.btnRegister);
+        btnRegistrar.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
-        username2= user.getText().toString();
-        password2= pass.getText().toString();
-        new CreateUser().execute();
+        //Recupero la informacion y la paso a las varibles staticas
 
+        usuarioS = edtUsuario.getText().toString();
+        apellidosS = edtApellidos.getText().toString();
+        telefonoS = edtTelefono.getText().toString();
+        correoS = edtCorreoElectronico.getText().toString();
+        nombreUsuarioS = edtNombreUsuario.getText().toString();
+        contrasenaS = edtContraseña.getText().toString();
+        new CreateUser().execute();
 
     }
 
@@ -74,7 +83,7 @@ public class Register extends Activity implements OnClickListener{
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(Register.this);
-            pDialog.setMessage("Creating User...");
+            pDialog.setMessage("Creando Usuario...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
             pDialog.show();
@@ -84,13 +93,18 @@ public class Register extends Activity implements OnClickListener{
         protected String doInBackground(String... args) {
             // TODO Auto-generated method stub
             // Check for success tag
+
             int success;
 
             try {
                 // Building Parameters
                 List params = new ArrayList();
-                params.add(new BasicNameValuePair("username", username2));
-                params.add(new BasicNameValuePair("password", password2));
+                params.add(new BasicNameValuePair("usuario", usuarioS));
+                params.add(new BasicNameValuePair("apellidos", apellidosS));
+                params.add(new BasicNameValuePair("telefono", telefonoS));
+                params.add(new BasicNameValuePair("correo", correoS));
+                params.add(new BasicNameValuePair("nombreUsuario", nombreUsuarioS));
+                params.add(new BasicNameValuePair("password", contrasenaS));
 
                 Log.d("request!", "starting");
 
@@ -104,14 +118,15 @@ public class Register extends Activity implements OnClickListener{
                 // json success element
                 success = json.getInt(TAG_SUCCESS);
                 if (success == 1) {
-                    Log.d("User Created!", json.toString());
+                    Log.d("Usuario Creado!!!", json.toString());
                     finish();
                     return json.getString(TAG_MESSAGE);
                 }else{
-                    Log.d("Registering Failure!", json.getString(TAG_MESSAGE));
+                    Log.d("Registro Fallido!!!", json.getString(TAG_MESSAGE));
                     return json.getString(TAG_MESSAGE);
 
                 }
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }
