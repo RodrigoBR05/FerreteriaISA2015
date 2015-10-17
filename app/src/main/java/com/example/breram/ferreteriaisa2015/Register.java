@@ -49,12 +49,12 @@ public class Register extends Activity implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
-        user = (EditText)findViewById(R.id.username);
-        pass = (EditText)findViewById(R.id.password);
+        //user = (EditText)findViewById(R.id.username);
+        //pass = (EditText)findViewById(R.id.password);
 
 
-        mRegister = (Button)findViewById(R.id.register);
-        mRegister.setOnClickListener(this);
+//        mRegister = (Button)findViewById(R.id.register);
+  //      mRegister.setOnClickListener(this);
 
     }
 
