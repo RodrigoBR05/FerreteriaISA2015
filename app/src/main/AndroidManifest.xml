@@ -22,13 +22,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ClienteActivity" />
+
+        <activity android:name=".ClienteActivity"
+                  android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".Register" />
+
         <activity
             android:name=".AdministradorActivity"
             android:label="@string/title_activity_administrador"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
+
     </application>
 
 </manifest>
