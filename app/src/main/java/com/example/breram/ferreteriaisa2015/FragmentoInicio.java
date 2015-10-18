@@ -31,5 +31,4 @@ public class FragmentoInicio extends Fragment {
         reciclador.setAdapter(adaptador);
         return view;
     }
-
 }
