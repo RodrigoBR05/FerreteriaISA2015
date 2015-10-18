@@ -1,8 +1,20 @@
 <resources>>
+
+    <!--MENU NAVIGATOR-->
+    <style name="Theme.RicoPaRico" parent="Base.AppTheme">
+    </style>
+
+    <style name="Theme.ConNavigationDrawer" parent="Base.AppTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!--MENU PRINCIPAL-->
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
 </resources>
