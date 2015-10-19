@@ -33,7 +33,7 @@ public class AdaptadorInicio extends RecyclerView.Adapter<AdaptadorInicio.ViewHo
 
     @Override
     public int getItemCount() {
-        return Comida.COMIDAS_POPULARES.size();
+        return Producto.PRODUCTOS_POPULARES.size();
     }
 
     @Override
@@ -45,15 +45,14 @@ public class AdaptadorInicio extends RecyclerView.Adapter<AdaptadorInicio.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
-        Comida item = Comida.COMIDAS_POPULARES.get(i);
+        Producto item = Producto.PRODUCTOS_POPULARES.get(i);
 
         Glide.with(viewHolder.itemView.getContext())
                 .load(item.getIdDrawable())
                 .centerCrop()
                 .into(viewHolder.imagen);
         viewHolder.nombre.setText(item.getNombre());
-        viewHolder.precio.setText("$" + item.getPrecio());
-
+        viewHolder.precio.setText("¢" + item.getPrecio());
     }
 
 
