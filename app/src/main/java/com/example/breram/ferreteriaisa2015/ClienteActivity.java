@@ -54,13 +54,16 @@ public class ClienteActivity extends AppCompatActivity {
             case R.id.item_inicio:
                 fragmentoGenerico = new FragmentoInicio();
                 break;
-            case R.id.item_cuenta:
+            case R.id.item_lista_deseos:
                 // Fragmento para la sección Cuenta
                 break;
-            case R.id.item_categorias:
+            case R.id.item_informacion:
                 // Fragmento para la sección Categorías
                 break;
             case R.id.item_configuracion:
+                // Iniciar actividad de configuración
+                break;
+            case R.id.item_categorias:
                 // Iniciar actividad de configuración
                 break;
         }
