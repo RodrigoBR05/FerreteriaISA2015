@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Registre su información personal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtApellidos"
+        android:layout_below="@+id/textView2"
+        android:text="Nombre" />
+
+    <EditText
+        android:id="@+id/edtUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:ems="10" />
+
+
+    <TextView
+        android:id="@+id/textViewApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtUsuario"
+        android:layout_below="@+id/edtUsuario"
+        android:text="Apellidos" />
+
+    <EditText
+        android:id="@+id/edtApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewApellidos"
+        android:layout_centerHorizontal="true"
+        android:ems="10" />
+
+
+    <TextView
+        android:id="@+id/textViewTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtApellidos"
+        android:layout_below="@+id/edtApellidos"
+        android:text="Teléfono" />
+
+    <EditText
+        android:id="@+id/edtTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTelefono"
+        android:layout_centerHorizontal="true"
+        android:text="########"
+        android:ems="10" />
+
+
+    <TextView
+        android:id="@+id/textViewCorreoElectronico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtTelefono"
+        android:layout_below="@+id/edtTelefono"
+        android:text="Correo electrónico" />
+
+    <EditText
+        android:id="@+id/edtCorreoElectronico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCorreoElectronico"
+        android:layout_centerHorizontal="true"
+        android:text="xxxxx@gmail.com"
+        android:ems="10" />
+
+
+
+    <TextView
+        android:id="@+id/textViewNombreUusuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtCorreoElectronico"
+        android:layout_below="@+id/edtCorreoElectronico"
+        android:text="Nombre Usuario" />
+
+    <EditText
+        android:id="@+id/edtNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewNombreUusuario"
+        android:layout_centerHorizontal="true"
+        android:ems="10" />
+
+
+
+    <TextView
+        android:id="@+id/textViewContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtNombreUsuario"
+        android:layout_below="@+id/edtNombreUsuario"
+        android:text="Contraseña" />
+
+
+    <EditText
+        android:id="@+id/edtcontraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewContraseña"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/edtcontraseña"
+        android:layout_below="@+id/edtcontraseña"
+        android:text="Registrarse" />
+
+</RelativeLayout>

@@ -15,26 +15,26 @@
             android:name=".Login"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
-
             <intent-filter>
                 <action android:name="android.intent.action.Main" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ClienteActivity"
-                  android:theme="@style/AppTheme.NoActionBar"/>
-
+        <activity
+            android:name=".ClienteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Register" />
-
         <activity
             android:name=".AdministradorActivity"
             android:label="@string/title_activity_administrador"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-
-
+        <activity
+            android:name=".InformacionActivity"
+            android:label="@string/title_activity_informacion"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
