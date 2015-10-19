@@ -12,13 +12,20 @@
             android:icon="@drawable/cuenta"
             android:title="@string/item_cuenta" />
         <item
-            android:id="@+id/item_categorias"
-            android:icon="@drawable/categorias"
-            android:title="@string/item_categorias" />
+            android:id="@+id/item_informacion"
+            android:checked="true"
+            android:icon="@drawable/inicio"
+            android:title="@string/item_informacion" />
         <item
             android:id="@+id/item_configuracion"
             android:icon="@drawable/configuracion"
             android:title="@string/item_configuracion" />
+
+        <item
+            android:id="@+id/item_categorias"
+            android:icon="@drawable/categorias"
+            android:title="@string/item_categorias" />
+
     </group>
 
 </menu>
